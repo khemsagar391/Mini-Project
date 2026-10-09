@@ -11,4 +11,3 @@ ml/models/*.npz
 Thumbs.db
 desktop.iniml/checks/
 
-ml/checks/
