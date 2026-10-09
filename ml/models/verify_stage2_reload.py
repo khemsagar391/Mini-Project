@@ -5,15 +5,19 @@ Pass criteria: unusualness scores match to 1e-9 and the alarm decisions are iden
 import sys
 from pathlib import Path
 
+ML = Path(__file__).resolve().parents[1]  # the ml/ folder
+HERE = ML
+sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
+
+import sys
+from pathlib import Path
+
 import joblib
 import numpy as np
 
 import sys
 from pathlib import Path
 
-ML = Path(__file__).resolve().parents[1]  # the ml/ folder
-HERE = ML
-sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
 MODELS = HERE / "models"
 NAME = "isolation_forest_v1"
 

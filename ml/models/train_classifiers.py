@@ -15,6 +15,13 @@ prediction time, in seconds, in the comparison CSV.
 Writes ml/metrics/stage1_comparison.csv and ml/metrics/stage1_per_class_test.csv.
 Does not save model files (that is Phase 6).
 """
+import sys
+from pathlib import Path
+
+ML = Path(__file__).resolve().parents[1]  # the ml/ folder
+HERE = ML
+sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
+
 import glob
 import time
 from pathlib import Path
@@ -40,9 +47,6 @@ from feature_schema import FEATURE_NAMES, compute_features
 import sys
 from pathlib import Path
 
-ML = Path(__file__).resolve().parents[1]  # the ml/ folder
-HERE = ML
-sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
 RAW = HERE / "data" / "raw" / "cicids2017"
 METRICS = HERE / "metrics"
 SEED = 42

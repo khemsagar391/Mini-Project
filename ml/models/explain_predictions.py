@@ -5,6 +5,13 @@ Explains a small set of saved test flows and writes ml/reports/explanations.csv.
 SHAP values show which features pushed a score up or down for one flow.
 They describe what the model relies on. They do not prove what caused an attack.
 """
+import sys
+from pathlib import Path
+
+ML = Path(__file__).resolve().parents[1]  # the ml/ folder
+HERE = ML
+sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
+
 from pathlib import Path
 
 import joblib
@@ -14,7 +21,9 @@ import shap
 
 from feature_schema import FEATURE_NAMES
 
-HERE = Path(__file__).resolve().parent
+import sys
+from pathlib import Path
+
 MODELS = HERE / "models"
 REPORTS = HERE / "reports"
 N_PER_GROUP = 3  # flows to explain per group

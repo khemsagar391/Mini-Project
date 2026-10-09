@@ -4,6 +4,13 @@ For each attack class, measures how well the 'unusual' score separates it from
 normal traffic (ROC-AUC: 0.5 = no separation, 1.0 = perfect). Compares Isolation
 Forest with Local Outlier Factor. Choosing between them must use these numbers.
 """
+import sys
+from pathlib import Path
+
+ML = Path(__file__).resolve().parents[1]  # the ml/ folder
+HERE = ML
+sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
+
 import joblib
 import numpy as np
 import pandas as pd
@@ -16,9 +23,6 @@ from train_classifiers import SEED, EVAL_CAP, cap_per_class, load_all, to_xy
 import sys
 from pathlib import Path
 
-ML = Path(__file__).resolve().parents[1]  # the ml/ folder
-HERE = ML
-sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
 METRICS = HERE / "metrics"
 MODELS = HERE / "models"
 LOF_TRAIN_CAP = 20_000  # LOF scales with training size; use a sample

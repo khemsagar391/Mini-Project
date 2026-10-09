@@ -6,6 +6,13 @@ Reads in chunks of 100,000 rows. Writes three reports to ml/reports/:
   data_quality_datasets.csv per dataset: duplicates across files, label conflicts
 Does not modify the raw data.
 """
+import sys
+from pathlib import Path
+
+ML = Path(__file__).resolve().parents[1]  # the ml/ folder
+HERE = ML
+sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
+
 from collections import defaultdict
 from pathlib import Path
 
@@ -15,9 +22,6 @@ import pandas as pd
 import sys
 from pathlib import Path
 
-ML = Path(__file__).resolve().parents[1]  # the ml/ folder
-HERE = ML
-sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
 ROOT = HERE / "data" / "raw"
 REPORTS = HERE / "reports"
 CHUNK = 100_000

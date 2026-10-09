@@ -1,10 +1,21 @@
+import sys
+from pathlib import Path
+
+ML = Path(__file__).resolve().parents[1]  # the ml/ folder
+HERE = ML
+sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
+
+import sys
+from pathlib import Path
+
+
 from collections import Counter
 from pathlib import Path
 
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parent / "data" / "raw"
-OUT = Path(__file__).resolve().parent / "reports" / "label_counts.csv"
+ROOT = HERE / "data" / "raw"
+OUT = HERE / "reports" / "label_counts.csv"
 
 FILES = sorted(
     list(ROOT.glob("cicids2017/*/*.csv"))

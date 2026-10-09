@@ -1,7 +1,7 @@
 {
   "model_name": "isolation_forest_v1",
   "algorithm": "sklearn IsolationForest",
-  "trained_at": "2026-10-09T22:53:51",
+  "trained_at": "2026-10-10T00:56:09",
   "feature_schema_version": "1.0",
   "feature_names": [
     "total_packets",

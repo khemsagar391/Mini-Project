@@ -1,3 +1,10 @@
+import sys
+from pathlib import Path
+
+ML = Path(__file__).resolve().parents[1]  # the ml/ folder
+HERE = ML
+sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
+
 import json
 import time
 from datetime import datetime
@@ -16,9 +23,6 @@ from train_classifiers import SEED, EVAL_CAP, cap_per_class, load_all, to_xy
 import sys
 from pathlib import Path
 
-ML = Path(__file__).resolve().parents[1]  # the ml/ folder
-HERE = ML
-sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
 METRICS = HERE / "metrics"
 MODELS = HERE / "models"
 NAME = "isolation_forest_v1"

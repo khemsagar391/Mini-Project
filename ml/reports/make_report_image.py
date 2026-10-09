@@ -1,3 +1,10 @@
+import sys
+from pathlib import Path
+
+ML = Path(__file__).resolve().parents[1]  # the ml/ folder
+HERE = ML
+sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
+
 
 from pathlib import Path
 
@@ -9,9 +16,6 @@ import pandas as pd
 import sys
 from pathlib import Path
 
-ML = Path(__file__).resolve().parents[1]  # the ml/ folder
-HERE = ML
-sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
 COMP = HERE / "metrics" / "stage1_comparison.csv"
 PER_CLASS = HERE / "metrics" / "stage1_per_class_test.csv"
 OUT = HERE / "reports" / "stage1_report.png"
