@@ -37,7 +37,12 @@ from xgboost import XGBClassifier
 from data_preprocessing import load_cicids_file, time_split
 from feature_schema import FEATURE_NAMES, compute_features
 
-HERE = Path(__file__).resolve().parent
+import sys
+from pathlib import Path
+
+ML = Path(__file__).resolve().parents[1]  # the ml/ folder
+HERE = ML
+sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
 RAW = HERE / "data" / "raw" / "cicids2017"
 METRICS = HERE / "metrics"
 SEED = 42

@@ -13,8 +13,12 @@ from sklearn.neighbors import LocalOutlierFactor
 from sklearn.preprocessing import LabelEncoder
 
 from train_classifiers import SEED, EVAL_CAP, cap_per_class, load_all, to_xy
+import sys
+from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
+ML = Path(__file__).resolve().parents[1]  # the ml/ folder
+HERE = ML
+sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
 METRICS = HERE / "metrics"
 MODELS = HERE / "models"
 LOF_TRAIN_CAP = 20_000  # LOF scales with training size; use a sample

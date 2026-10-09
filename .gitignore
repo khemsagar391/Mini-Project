@@ -9,4 +9,6 @@ ml/models/*.npz
 .vscode/
 .idea/
 Thumbs.db
-desktop.ini
+desktop.iniml/checks/
+
+ml/checks/

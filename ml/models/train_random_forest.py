@@ -14,7 +14,12 @@ from feature_schema import FEATURE_NAMES, SCHEMA_VERSION
 from train_classifiers import (SEED, EVAL_CAP, cap_per_class, load_all,
                                summarise, to_xy)
 
-HERE = Path(__file__).resolve().parent
+import sys
+from pathlib import Path
+
+ML = Path(__file__).resolve().parents[1]  # the ml/ folder
+HERE = ML
+sys.path[:0] = [str(ML), str(ML / "models"), str(ML / "reports")]
 MODELS = HERE / "models"
 NAME = "random_forest_v1"
 PARAMS = dict(n_estimators=100, max_depth=20, min_samples_leaf=20,
