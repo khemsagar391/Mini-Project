@@ -1,0 +1,3 @@
+dataset,rows_kept,exact_duplicate_rows,exact_duplicates_within_files,extra_copies_across_files,duplicates_ignoring_label,rows_in_label_conflict_groups
+CICIDS2017,2830743,203,203,0,203,0
+InSDN,343889,1,1,0,1,0

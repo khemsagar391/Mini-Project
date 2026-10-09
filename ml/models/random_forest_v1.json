@@ -1,0 +1,59 @@
+{
+  "model_name": "random_forest_v1",
+  "algorithm": "sklearn RandomForestClassifier",
+  "trained_at": "2026-10-09T22:26:41",
+  "feature_schema_version": "1.0",
+  "feature_names": [
+    "total_packets",
+    "total_bytes",
+    "duration_s",
+    "packets_per_sec",
+    "bytes_per_sec",
+    "avg_packet_size"
+  ],
+  "label_classes": [
+    "BENIGN",
+    "Bot",
+    "DDoS",
+    "DoS GoldenEye",
+    "DoS Hulk",
+    "DoS Slowhttptest",
+    "DoS slowloris",
+    "FTP-Patator",
+    "Heartbleed",
+    "Infiltration",
+    "PortScan",
+    "SSH-Patator",
+    "Web Attack - Brute Force",
+    "Web Attack - Sql Injection",
+    "Web Attack - XSS"
+  ],
+  "split": "time-ordered 70/15/15 within each label (not a true session split)",
+  "train_flows": 1981513,
+  "params": {
+    "n_estimators": 100,
+    "max_depth": 20,
+    "min_samples_leaf": 20,
+    "max_samples": 0.3,
+    "class_weight": "balanced_subsample",
+    "n_jobs": -1,
+    "random_state": 42
+  },
+  "fit_seconds": 134.0,
+  "versions": {
+    "python": "3.12.10",
+    "scikit-learn": "1.9.1"
+  },
+  "validation": {
+    "macro_f1": 0.6711,
+    "accuracy": 0.959,
+    "pr_auc_macro": 0.777,
+    "benign_fpr": 0.1042
+  },
+  "test_reference_only": {
+    "macro_f1": 0.6051,
+    "accuracy": 0.8816,
+    "pr_auc_macro": 0.6454,
+    "benign_fpr": 0.1608
+  }
+}

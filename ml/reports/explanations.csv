@@ -1,0 +1,13 @@
+stage,flow,prediction,class_probability,explanation
+1 Random Forest,1,SSH-Patator,0.8357,Predicted SSH-Patator mainly due to: packets_per_sec = 2.299e+04 (+0.251); duration_s = 8.7e-05 (+0.176); bytes_per_sec = 0 (+0.110)
+1 Random Forest,2,SSH-Patator,0.93,Predicted SSH-Patator mainly due to: packets_per_sec = 1.77e+04 (+0.284); duration_s = 0.000113 (+0.208); bytes_per_sec = 0 (+0.119)
+1 Random Forest,4,SSH-Patator,0.5866,Predicted SSH-Patator mainly due to: packets_per_sec = 3.279e+04 (+0.174); duration_s = 6.1e-05 (+0.089); bytes_per_sec = 0 (+0.083)
+1 Random Forest,0,BENIGN,0.99,"Predicted normal mainly due to: total_bytes = 3,137 (+0.213); avg_packet_size = 130.7 (+0.211); packets_per_sec = 9.696 (+0.146)"
+1 Random Forest,3,BENIGN,0.888,"Predicted normal mainly due to: total_bytes = 3,777 (+0.200); avg_packet_size = 99.39 (+0.170); total_packets = 38 (+0.167)"
+1 Random Forest,5,BENIGN,0.8022,"Predicted normal mainly due to: total_bytes = 4,113 (+0.187); total_packets = 42 (+0.172); avg_packet_size = 97.93 (+0.172)"
+2 Isolation Forest,1,normal,,Not flagged (normal) mainly due to: duration_s = 8.7e-05 (-0.646); bytes_per_sec = 0 (-0.364); total_packets = 2 (-0.270)
+2 Isolation Forest,2,normal,,Not flagged (normal) mainly due to: duration_s = 0.000113 (-0.645); bytes_per_sec = 0 (-0.362); total_packets = 2 (-0.272)
+2 Isolation Forest,4,normal,,Not flagged (normal) mainly due to: duration_s = 6.1e-05 (-0.631); bytes_per_sec = 0 (-0.366); avg_packet_size = 0 (-0.289)
+2 Isolation Forest,0,normal,,"Not flagged (normal) mainly due to: total_packets = 24 (+1.168); total_bytes = 3,137 (+0.467); packets_per_sec = 9.696 (-0.322)"
+2 Isolation Forest,3,normal,,"Not flagged (normal) mainly due to: total_packets = 38 (+2.069); total_bytes = 3,777 (+0.554); duration_s = 7.191 (+0.519)"
+2 Isolation Forest,5,normal,,"Not flagged (normal) mainly due to: total_packets = 42 (+2.196); duration_s = 9.759 (+0.852); total_bytes = 4,113 (+0.519)"

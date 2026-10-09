@@ -1,0 +1,12 @@
+dataset,file,rows_read,padding_rows_dropped,rows_kept,within_file_exact_duplicates,within_file_duplicates_ignoring_label
+CICIDS2017,Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,225745,0,225745,2,2
+CICIDS2017,Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,286467,0,286467,1,1
+CICIDS2017,Friday-WorkingHours-Morning.pcap_ISCX.csv,191033,0,191033,2,2
+CICIDS2017,Monday-WorkingHours.pcap_ISCX.csv,529918,0,529918,34,34
+CICIDS2017,Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,288602,0,288602,142,142
+CICIDS2017,Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,458968,288602,170366,1,1
+CICIDS2017,Tuesday-WorkingHours.pcap_ISCX.csv,445909,0,445909,4,4
+CICIDS2017,Wednesday-workingHours.pcap_ISCX.csv,692703,0,692703,17,17
+InSDN,metasploitable-2.csv,136743,0,136743,0,0
+InSDN,Normal_data.csv,68424,0,68424,1,1
+InSDN,OVS.csv,138722,0,138722,0,0

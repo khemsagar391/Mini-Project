@@ -1,0 +1,16 @@
+class,test_flows,flagged_by_isolation_forest,found_by_random_forest
+BENIGN,20000,0.0098,0.8392
+Bot,295,0.0,0.0
+DDoS,19205,0.0,0.996
+DoS GoldenEye,1544,0.0,0.9825
+DoS Hulk,20000,0.0,0.733
+DoS Slowhttptest,825,0.1164,0.8024
+DoS slowloris,870,0.0,0.3977
+FTP-Patator,1191,0.0,0.9933
+Heartbleed,2,1.0,0.5
+Infiltration,6,0.0,0.0
+PortScan,20000,0.0,0.9922
+SSH-Patator,885,0.0,0.8972
+Web Attack - Brute Force,227,0.0396,0.4934
+Web Attack - Sql Injection,4,0.0,0.0
+Web Attack - XSS,98,0.0102,0.3469

@@ -1,0 +1,15 @@
+class,val_flows,AUC Isolation Forest,AUC Local Outlier Factor
+Bot,295,0.561,0.738
+DDoS,19204,0.84,0.909
+DoS GoldenEye,1544,0.839,0.903
+DoS Hulk,20000,0.879,0.531
+DoS Slowhttptest,825,0.861,0.595
+DoS slowloris,869,0.714,0.852
+FTP-Patator,1191,0.629,0.867
+Heartbleed,2,1.0,0.986
+Infiltration,5,0.907,0.615
+PortScan,20000,0.475,0.969
+SSH-Patator,885,0.595,0.685
+Web Attack - Brute Force,226,0.607,0.401
+Web Attack - Sql Injection,3,0.788,0.892
+Web Attack - XSS,98,0.609,0.404
